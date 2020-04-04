@@ -1,0 +1,45 @@
+version: "3.1"
+services:
+  nginx_panda:
+    image: nginx:alpine
+    container_name: panda_webserver
+    working_dir: /application
+    volumes:
+      - ./application:/application
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8080:80"
+    networks:
+      - panda-network
+
+  phpfpm_panda:
+    build: ./phpfpm
+    container_name: panda_php
+    working_dir: /application
+    volumes:
+      - ./application:/application
+      - ./phpfpm/php-ini-overrides.ini:/etc/php/7.3/fpm/conf.d/99-overrides.ini
+    networks:
+      - panda-network
+
+  mysql_panda:
+    image: mysql
+    container_name: panda_db_mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=panda
+      - MYSQL_PASSWORD=panda
+      - MYSQL_DATABASE=panda
+    networks:
+      - panda-network
+    ports:
+    - "3320:3306"
+
+networks:
+  panda-network:
+    driver: bridge
+
+volumes:
+  pandadat:
