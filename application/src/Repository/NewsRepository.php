@@ -53,7 +53,7 @@ class NewsRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function saveNews(News $news)
+    public function saveNews(News $news): void
     {
         $entityManager = $this->getEntityManager();
         $entityManager->persist($news);
@@ -66,7 +66,7 @@ class NewsRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function updateNews(News $news)
+    public function updateNews(News $news): void
     {
         if (!$news->getId()) {
             throw new EntityNotFoundException();
@@ -94,7 +94,7 @@ class NewsRepository extends ServiceEntityRepository
      * @throws EntityNotFoundException
      * @throws ORMException
      */
-    public function removeById(int $id)
+    public function removeById(int $id): void
     {
         $news = $this->findOneBy([
             'id' => $id,
@@ -102,7 +102,9 @@ class NewsRepository extends ServiceEntityRepository
         ]);
 
         if (!$news) {
-            throw  new EntityNotFoundException();
+            throw  new EntityNotFoundException(
+                sprintf('News with id %s do not exists', $id)
+            );
         }
 
         $entityManager = $this->getEntityManager();

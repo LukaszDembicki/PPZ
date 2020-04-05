@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cae72d14cd787e496e791bcb7de44405",
+    "content-hash": "d9199f90dd3a0b21c281f96e36f4a177",
     "packages": [
+        {
+            "name": "cmen/google-charts-bundle",
+            "version": "3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cmen/CMENGoogleChartsBundle.git",
+                "reference": "da6baee249d841407bdfecee69a94402ae50afd2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cmen/CMENGoogleChartsBundle/zipball/da6baee249d841407bdfecee69a94402ae50afd2",
+                "reference": "da6baee249d841407bdfecee69a94402ae50afd2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^5.6 || ^7.0",
+                "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0 || ^5.0",
+                "twig/twig": "^1.42 || ^2.12 || ^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpstan/phpstan": "^0.12.0",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "CMEN\\GoogleChartsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Meneses"
+                }
+            ],
+            "description": "This Bundle provides a Twig extension and PHP objects to display Google charts in your Symfony application.",
+            "keywords": [
+                "chart",
+                "charts",
+                "google",
+                "graph",
+                "graphs",
+                "map"
+            ],
+            "time": "2019-12-06T16:29:20+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "1.10.1",
@@ -1207,6 +1258,52 @@
                 "validator"
             ],
             "time": "2020-02-13T22:36:52+00:00"
+        },
+        {
+            "name": "ghunti/highcharts-php",
+            "version": "v3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ghunti/HighchartsPHP.git",
+                "reference": "548b321478510ec1559432a9baabbfba1a1e559a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ghunti/HighchartsPHP/zipball/548b321478510ec1559432a9baabbfba1a1e559a",
+                "reference": "548b321478510ec1559432a9baabbfba1a1e559a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ghunti\\HighchartsPHP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gonçalo Queirós",
+                    "email": "mail@goncaloqueiros.net",
+                    "homepage": "http://goncaloqueiros.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A php wrapper for highcharts and highstock javascript libraries",
+            "homepage": "http://goncaloqueiros.net/highcharts.php",
+            "keywords": [
+                "charts",
+                "highcharts",
+                "highstock",
+                "javascript",
+                "php"
+            ],
+            "time": "2016-01-24T11:57:43+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -7827,6 +7924,46 @@
                 "productivity"
             ],
             "time": "2019-10-24T07:13:31+00:00"
+        },
+        {
+            "name": "jpgraph/jpgraph",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ztec/JpGraph.git",
+                "reference": "e82db7da6a546d3926c24c9a346226da7aa49094"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ztec/JpGraph/zipball/e82db7da6a546d3926c24c9a346226da7aa49094",
+                "reference": "e82db7da6a546d3926c24c9a346226da7aa49094",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/JpGraph.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "QPL 1.0"
+            ],
+            "authors": [
+                {
+                    "name": "JpGraph team"
+                }
+            ],
+            "description": "jpGraph, library to make graphs and charts",
+            "homepage": "http://jpgraph.net/",
+            "keywords": [
+                "chart",
+                "data",
+                "graph",
+                "jpgraph",
+                "pie"
+            ],
+            "time": "2017-02-23T09:44:15+00:00"
         },
         {
             "name": "nikic/php-parser",

@@ -73,7 +73,6 @@ class NewsController extends AbstractController
      * @Route("/update", name="news_update", methods={"PUT"})
      * @param Request $request
      * @return JsonResponse
-     * @throws ExceptionInterface
      */
     public function updateNews(Request $request)
     {

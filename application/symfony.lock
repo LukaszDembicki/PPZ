@@ -1,4 +1,7 @@
 {
+    "cmen/google-charts-bundle": {
+        "version": "3.2.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -90,8 +93,14 @@
     "egulias/email-validator": {
         "version": "2.1.17"
     },
+    "ghunti/highcharts-php": {
+        "version": "v3.0.3"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
+    },
+    "jpgraph/jpgraph": {
+        "version": "4.0.2"
     },
     "laminas/laminas-code": {
         "version": "3.4.1"

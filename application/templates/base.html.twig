@@ -6,8 +6,15 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        homepage
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}
+            <div id="div_chart"></div>
+
+        {% endblock %}
+        {% block javascripts %}
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                {{ gc_draw(piechart, 'div_chart') }}
+            </script>
+        {% endblock %}
     </body>
 </html>
